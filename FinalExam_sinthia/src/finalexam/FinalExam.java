@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 
 
@@ -26,6 +27,15 @@ public class FinalExam {
 			        System.out.println("Launching Google Chrome browser"); 
 			        driver = new ChromeDriver();
 			        driver.get(baseUrl);
+	  }
+	 
+	 
+	 @Test(priority=1)
+	  public void verifyPageTitle() throws InterruptedException //for login details
+	  {
+	      String getPageTitle = driver.getTitle();
+	      String _pageTitle = "Swag Labs";
+		Assert.assertEquals(getPageTitle, _pageTitle);
 	  }
 	 
 	 @Test(priority=1)
@@ -141,13 +151,13 @@ public class FinalExam {
 	  }
 	 
 	// @Test(priority=8)
-	 // public void Cancel() //to remove items in carts
+	//  public void Cancel() //to remove items in carts
 	 // {
 	 
 	// WebElement Cancel = driver.findElement(By.xpath("//button[@id='cancel']"));
 	// Cancel .click();
 	 
-	 // }
+	//  }
 		 
 		
 		 
