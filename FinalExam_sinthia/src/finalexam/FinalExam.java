@@ -38,7 +38,7 @@ public class FinalExam {
 		Assert.assertEquals(getPageTitle, _pageTitle);
 	  }
 	 
-	 @Test(priority=1)
+	 @Test(priority=2)
 	  public void Login() throws InterruptedException //for login details
 	  {
 		  WebElement  UserName = driver.findElement(By.xpath("//input[@id='user-name']")); //username
@@ -55,8 +55,58 @@ public class FinalExam {
 			 
 	  }
 	 
+	 @Test(priority=3)
+	  public void sideButton() throws InterruptedException //for side button
+	  {
+		  
+			 
+			 WebElement  button = driver.findElement(By.xpath("//button[@id='react-burger-menu-btn']")); //side button details
+			 button.click();
+			 
+			 Thread.sleep(1000);
+	  }
+	 @Test(priority=4)
+	  public void About() throws InterruptedException //for side button
+	  {
+		  
+			 
+			 WebElement  About = driver.findElement(By.xpath("//a[@id='about_sidebar_link']")); //side button details
+			 About.click();
+			 
+			 
+			 
+			 Thread.sleep(1000);
+			 
+			 driver.navigate().back();
+	  }
+	  
+	       
+			 
+			 @Test(priority=5)
+			  public void  crossButton () throws InterruptedException //for side button
+			  {
+			 
+			 
+			 WebElement  crossButton = driver.findElement(By.xpath("//button[@id='react-burger-cross-btn']")); //side button details
+			 crossButton.click();
+			 
+			
+			
+			 
+			 
+	  }
+			 
+			
+	   
+	 
 		
-	 @Test(priority=2)
+	 private void pause(int i) {
+				// TODO Auto-generated method stub
+				
+			}
+
+
+	@Test(priority=6)
 	  public void AddToCart() throws InterruptedException //to add items in carts
 	  {
 		 WebElement  SauceLabBackPack = driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-backpack']")); 
@@ -84,7 +134,7 @@ public class FinalExam {
 		 
 	  }
 	 
-	 @Test(priority=3)
+	 @Test(priority=7)
 	  public void RemoveItems() throws InterruptedException //to remove items in carts
 	  {
 		 WebElement  SauceLabBackPack = driver.findElement(By.xpath("//button[@id='remove-sauce-labs-backpack']")); 
@@ -115,7 +165,7 @@ public class FinalExam {
 	  }
 	 
 	 
-	 @Test(priority=4)
+	 @Test(priority=8)
 	  public void Cart() throws InterruptedException //to checkout cart
 	  {
 		 
@@ -127,7 +177,7 @@ public class FinalExam {
 		 
 	  }
 	 
-	 @Test(priority=5)
+	 @Test(priority=9)
 	  public void Checkout() throws InterruptedException // checkout details
 	  {
 		 
@@ -172,7 +222,7 @@ public class FinalExam {
 		 
 	 // }
 	 
-		 @Test(priority=6) 
+		 @Test(priority=10) 
 		  public void finish() throws InterruptedException // for finish
 		  {
 		 
@@ -185,12 +235,27 @@ public class FinalExam {
 		 
 		 
 	  }
-		 @Test(priority=9)
+		 @Test(priority=11)
 		  public void BackHome() throws InterruptedException //to go back to the home page again
 		  {
 		 
 		 WebElement BackHome= driver.findElement(By.xpath("//button[@id='back-to-products']"));
 		 BackHome .click();
+		 
+		 Thread.sleep(1000);
+		 
+		  }
+		 
+		 @Test(priority=12)
+		  public void logout() throws InterruptedException //to go back to the home page again
+		  {
+			 
+			 WebElement  button = driver.findElement(By.xpath("//button[@id='react-burger-menu-btn']")); //side button details
+			 button.click();
+			 
+		 
+		 WebElement logout= driver.findElement(By.xpath("//a[@id='logout_sidebar_link']"));
+		 logout .click();
 		 
 		 Thread.sleep(1000);
 		 
