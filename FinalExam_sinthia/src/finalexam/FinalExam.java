@@ -176,7 +176,7 @@ public class FinalExam {
 		 
 	  }
 		 @Test(priority=9)
-		  public void BackHome() throws InterruptedException //to go back to the home page
+		  public void BackHome() throws InterruptedException //to go back to the home page again
 		  {
 		 
 		 WebElement BackHome= driver.findElement(By.xpath("//button[@id='back-to-products']"));
