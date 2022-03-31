@@ -82,23 +82,11 @@ public class FinalExam {
 
 
 
-//	    @Test(priority=5)
-//	    public void  crossButton () throws InterruptedException //for side button
-//	    {
-//	        WebElement  crossButton = driver.findElement(By.xpath("//button[@id='react-burger-cross-btn']")); //side button details
-//	        crossButton.click();
-//	    }
 
 
 
 
-
-	    private void pause(int i) {
-	        // TODO Auto-generated method stub
-
-	    }
-
-
+	   
 	    @Test(priority=6)
 	    public void AddToCart() throws InterruptedException //to add items in carts
 	    {
@@ -193,27 +181,10 @@ public class FinalExam {
 
 	    }
 
-	    // @Test(priority=8)
-	    //  public void Cancel() //to remove items in carts
-	    // {
-
-	    // WebElement Cancel = driver.findElement(By.xpath("//button[@id='cancel']"));
-	    // Cancel .click();
-
-	    //  }
+	   
 
 
-
-	    // @Test(priority=7)
-	    // public void Continue() //to remove items in carts
-	    // {
-
-	    // WebElement Continue = driver.findElement(By.xpath("//input[@id='continue']"));
-	    // Continue .click();
-
-
-
-	    // }
+	
 
 	    @Test(priority=10)
 	    public void finish() throws InterruptedException // for finish
